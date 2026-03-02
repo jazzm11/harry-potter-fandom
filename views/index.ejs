@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+
+    <body>
+        <%- include('partials/nav') %>
+            <div class="container">
+                <h1>Welcome to the Harry Potter Fan Site made by Jazz!</h1>
+                <div class="card">
+                    <h2>Random Character</h2>
+                    <p>Name: <%= character.fullName %>
+                    </p>
+                    <p>House: <%= character.hogwartsHouse %>
+                    </p>
+                    <p>Played By: <%= character.interpretedBy %>
+                    </p>
+                    <img src="<%= character.image %>" alt="<%= character.fullName %> Image" width="200" />
+                </div>
+                <div class="card">
+                    <h2>Random Book</h2>
+                    <p>Title: <%= book.title %> - Number: <%= book.number %>
+                    </p>
+                    <p>Description: <%= book.description %>
+                    </p>
+                    <img src="<%= book.cover %>" alt="<%= book.title %> Cover" width="200" />
+                </div>
+            </div>
+
+    </body>
+
+    <%- include('partials/footer') %>
+
+</html>

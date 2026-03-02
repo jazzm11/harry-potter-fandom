@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+
+    <body>
+        <%- include('partials/nav') %>
+            <div class="container">
+                <h1>Harry Potter Books</h1>
+                <div class="cards-grid">
+                    <% books.forEach(book=> { %>
+                        <article class="card book-card">
+                            <div class="card-media">
+                                <img src="<%= book.cover %>" alt="Cover of <%= book.title %>">
+                            </div>
+                            <div class="card-body">
+                                <h2>
+                                    <%= book.title %>
+                                </h2>
+                                <h3>Book Number: <%= book.number %>
+                                </h3>
+                                <p>
+                                    <%= book.description %>
+                                </p>
+                            </div>
+                        </article>
+                        <% }) %>
+                </div>
+            </div>
+    </body>
+
+    <%- include('partials/footer') %>
+
+</html>
